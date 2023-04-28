@@ -1,3 +1,7 @@
+/*TRABAJO JAVA SWING, GESTOR DE CONTENEDORES
+ * ALBERTO PÉREZ ÁLVAREZ
+ */
+
 package B04.PaqB04;
 
 public class Contenedores {

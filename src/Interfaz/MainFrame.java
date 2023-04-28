@@ -1,3 +1,7 @@
+/*TRABAJO JAVA SWING, GESTOR DE CONTENEDORES
+ * ALBERTO PÉREZ ÁLVAREZ
+ */
+
 package B04.Interfaz;
 
 import B04.PaqB04.Contenedores;
@@ -31,6 +35,7 @@ public class MainFrame extends JFrame{
     private JPanel mainPanel;
     private JTextField textFieldCuantos;
     private JPanel Logo;
+    private JButton pesoTotalButton;
 
     public MainFrame() {
         setTitle("GESTOR DE CONTENEDORES");
@@ -42,6 +47,19 @@ public class MainFrame extends JFrame{
         Contenedores c1=new Contenedores();
         Puerto p1=new Puerto();
         p1.inicializar();
+
+        pesoTotalButton.addActionListener(new ActionListener() {
+
+                @Override
+                public void actionPerformed (ActionEvent actionEvent){
+                    try
+                    {
+                        PesoTotal su = new PesoTotal(p1);
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(mainPanel,"Se ha producido un error");
+                    }
+                }
+        });
 
         apilarButton.addActionListener(new ActionListener() {
             @Override
